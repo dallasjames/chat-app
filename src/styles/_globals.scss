@@ -1,0 +1,7 @@
+@use './variables' as *;
+
+:root {
+  color-scheme: light dark;
+  background-color: light-dark($color-light, $color-dark);
+  color: light-dark($color-dark, $color-light);
+}

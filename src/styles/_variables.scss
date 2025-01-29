@@ -1,0 +1,44 @@
+// Breakpoints
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+$breakpoint-max: 1600px;
+
+// Misc
+$site-max-width: 1300px;
+
+// Colors
+$color-black: #000;
+$color-white: #fff;
+$color-dark: #0a0a0a;
+$color-light: #ededed;
+$color-transparent: rgba(0, 0, 0, 0);
+$color-one: #3F888F;
+$color-two: #C2B078;
+$color-three: #734222;
+$color-four: #C7B446;
+$color-five: #1D334A;
+$color-six: #C35831;
+$color-seven: #CC0605;
+$color-eight: #CB3234;
+$color-nine: #E63244;
+$color-ten: #8B8C7A;
+
+// Margins
+$margin-bottom-sm: 10px;
+$margin-bottom-md: 20px;
+
+// z-index
+$z-index-header: 1000;
+$z-index-nav: 1001;
+$z-index-nav-btn: 1002;
+$z-index-modal: 1100;
+$z-index-preloader: 1200;
+$z-index-loader: 900;
+$z-index-alert: 2000;
+
+// Fonts
+$font-default: 16px;

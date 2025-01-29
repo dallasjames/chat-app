@@ -1,0 +1,76 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+$minX: 10px;
+$maxX: 875px;
+$minY: 0;
+$maxY: 550px;
+
+.Hero {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  background-image: url('/images/cow.jpg');
+  background-size: cover;
+  background-position: center;
+  @include standard-margin-bottom;
+
+  
+  @include respond-to('xl') {
+    max-width: 1200px;
+    height: 600px;
+  }
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    transform: translateY(-50%);
+    @include font-bold;
+    font-size: 38px;
+    line-height: 1.1;
+    text-align: center;
+    color: $color-transparent !important;
+    
+    @include respond-to('md') {
+      font-size: 48px;
+    }
+
+    @include respond-to('xl') {
+      top: 0;
+      width: auto;
+      animation: crazyTransform 3000ms linear infinite;
+    }
+  }
+
+  @keyframes crazyTransform {
+    0% {
+      transform: translateX($minX) translateY($minY);
+      background: radial-gradient($color-one, $color-two);
+      background-clip: text;
+    }
+    25% {
+      transform: translateX($maxX) translateY($minY);
+      background: radial-gradient($color-three, $color-four);
+      background-clip: text;
+    }
+    50% {
+      transform: translateX($maxX) translateY($maxY);
+      background: radial-gradient($color-five, $color-six);
+      background-clip: text;
+    }
+    75% {
+      transform: translateX($minX) translateY($maxY);
+      background: radial-gradient($color-seven, $color-eight);
+      background-clip: text;
+    }
+    100% {
+      transform: translateX($minX) translateY($minY);
+      background: radial-gradient($color-nine, $color-ten);
+      background-clip: text;
+    }
+  }
+}

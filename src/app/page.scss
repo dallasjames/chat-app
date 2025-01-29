@@ -1,0 +1,13 @@
+@use 'styles/variables' as *;
+@use 'styles/mixins' as *;
+
+.Home {
+  position: relative;
+  margin: 0 auto;
+  padding: 0px 40px;
+
+  @include respond-to('xl') {
+    padding: 0;
+    max-width: 1200px;
+  }
+}
