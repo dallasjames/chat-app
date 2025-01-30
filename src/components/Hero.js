@@ -3,7 +3,7 @@ import '../styles/components/Hero.scss'
 
 export default function Hero() {
   return (
-    <div className='Hero'>
+    <div className='Hero' onClick={() => console.log('clicked')}>
       <h1>This is a cow.</h1>
     </div>
   )

@@ -6,6 +6,13 @@ body {
   background-color: light-dark($color-light, $color-dark);
   color: light-dark($color-dark, $color-light);
   @include font-default;
+
+  @for $i from 1 through 10 {
+    .mouse-follower:nth-child(#{$i}) {
+      animation-delay: $i * 300ms;
+      transition: transform $i * 50ms linear;
+    }
+  }
 }
 
 h1,
@@ -31,4 +38,133 @@ strong {
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 100px);
+}
+
+.spinner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  animation: mouseFollowerSpin 1000ms linear infinite;
+
+  .mouse-follower {
+    position: fixed;
+    top: 0;
+    left: 0;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    z-index: 100;
+    pointer-events: none;
+    animation: mouseFollowerSpin 100ms linear infinite;
+  
+    &:nth-child(1) {
+      width: 500px;
+      background-color: $color-one;
+      border-top-left-radius: 47%;
+      border-bottom-left-radius: 47%;
+      border-top-right-radius: 47%;
+      border-bottom-right-radius: 47%;
+    }
+    &:nth-child(2) {
+      width: 50px;
+      background-color: $color-two;
+      border-top-left-radius: 47%;
+      border-bottom-left-radius: 47%;
+      border-top-right-radius: 47%;
+      border-bottom-right-radius: 47%;
+    }
+    &:nth-child(3) {
+      width: 100px;
+      background-color: $color-three;
+      border-top-left-radius: 47%;
+      border-bottom-left-radius: 47%;
+      border-top-right-radius: 47%;
+      border-bottom-right-radius: 47%;
+    }
+    &:nth-child(4) {
+      width: 120px;
+      background-color: $color-four;
+      border-top-left-radius: 47%;
+      border-bottom-left-radius: 47%;
+      border-top-right-radius: 47%;
+      border-bottom-right-radius: 47%;
+    }
+    &:nth-child(5) {
+      width: 80px;
+      background-color: $color-five;
+      border-top-left-radius: 47%;
+      border-bottom-left-radius: 47%;
+      border-top-right-radius: 47%;
+      border-bottom-right-radius: 47%;
+    }
+    &:nth-child(6) {
+      width: 300px;
+      background-color: $color-six;
+      border-top-left-radius: 47%;
+      border-bottom-left-radius: 47%;
+      border-top-right-radius: 47%;
+      border-bottom-right-radius: 47%;
+    }
+    &:nth-child(7) {
+      width: 280px;
+      background-color: $color-seven;
+      border-top-left-radius: 47%;
+      border-bottom-left-radius: 47%;
+      border-top-right-radius: 47%;
+      border-bottom-right-radius: 47%;
+  
+      &::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        width: 300px;
+        height: 300px;
+        background: transparent;
+        border-radius: 50%;
+        border: 10px solid $color-seven;
+      }
+    }
+    &:nth-child(8) {
+      width: 200px;
+      background-color: $color-eight;
+      border-top-left-radius: 47%;
+      border-bottom-left-radius: 47%;
+      border-top-right-radius: 47%;
+      border-bottom-right-radius: 47%;
+    }
+    &:nth-child(9) {
+      width: 100px;
+      background-color: $color-nine;
+      border-top-left-radius: 47%;
+      border-bottom-left-radius: 47%;
+      border-top-right-radius: 47%;
+      border-bottom-right-radius: 47%;
+    }
+    &:nth-child(10) {
+      width: 25px;
+      background-color: $color-ten;
+      border-top-left-radius: 47%;
+      border-bottom-left-radius: 47%;
+      border-top-right-radius: 47%;
+      border-bottom-right-radius: 47%;
+    }
+  }
+}
+
+@keyframes mouseFollowerSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
