@@ -1,0 +1,44 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.Hero {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  @include standard-margin-bottom;
+
+  
+  @include respond-to('xl') {
+    max-width: 1200px;
+    height: 600px;
+  }
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    transform: translateY(-50%);
+    @include font-bold;
+    font-size: 38px;
+    line-height: 1.1;
+    text-align: center;
+    color: $color-transparent;
+    
+    @include respond-to('md') {
+      font-size: 48px;
+    }
+
+    @include respond-to('xl') {
+      top: 0;
+      width: auto;
+      animation-duration: $animation-duration-standard;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+  }
+}

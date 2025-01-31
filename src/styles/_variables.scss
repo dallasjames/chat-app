@@ -16,16 +16,20 @@ $color-white: #fff;
 $color-dark: #0a0a0a;
 $color-light: #ededed;
 $color-transparent: rgba(0, 0, 0, 0);
-$color-one: #fff700;
-$color-two: #aeaeae;
-$color-three: #f3de67;
-$color-four: #11236a;
-$color-five: #ff5e00;
-$color-six: #c3a831;
-$color-seven: #c2cc05;
-$color-eight: #cce4df;
-$color-nine: #2c10b5;
-$color-ten: #8B8C7A;
+$color-1: #fff700;
+$color-2: #aeaeae;
+$color-3: #f3de67;
+$color-4: #11236a;
+$color-5: #ff5e00;
+$color-6: #c3a831;
+$color-7: #c2cc05;
+$color-8: #cce4df;
+$color-9: #2c10b5;
+$color-10: #8B8C7A;
+
+// Animation Durations
+$animation-duration-hover: 300ms;
+$animation-duration-standard: 6000ms;
 
 // Margins
 $margin-bottom-sm: 10px;

@@ -1,6 +1,7 @@
 "use client"
 import React, { useEffect, useState } from 'react'
 import "../styles/app.scss"
+import Nav from 'components/Nav/component'
 
 export default function RootLayout({ children }) {
   const [x, setX] = useState(0)
@@ -23,20 +24,17 @@ export default function RootLayout({ children }) {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/favicon.ico" />
       <body>
-        <div className='spinner'>
+        <div className='spinner' style={{top: y, left: x}}>
           {followerArray.map((item, index) => {
-            const mulitplier = index * 100
-            const newX = x + mulitplier
-            const newY = y + mulitplier
             return (
               <div
                 key={'item-' + index}
-                style={{top: newY, left: newX}}
                 className='mouse-follower'
               />
             )
           })}
         </div>
+        <Nav />
         {children}
       </body>
     </html>
