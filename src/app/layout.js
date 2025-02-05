@@ -37,6 +37,18 @@ export default function RootLayout({ children }) {
         <Nav />
         {children}
       </body>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-8PNKY9729Q"></script>
+      <script
+        dangerouslySetInnerHTML={{ __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-8PNKY9729Q');
+          `
+        }}
+      >
+      </script>
     </html>
   )
 }
