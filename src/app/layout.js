@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import "../styles/app.scss"
 import Nav from 'components/Nav/component'
+import Script from 'next/script'
 
 export default function RootLayout({ children }) {
   const [x, setX] = useState(0)
@@ -37,8 +38,8 @@ export default function RootLayout({ children }) {
         <Nav />
         {children}
       </body>
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-8PNKY9729Q"></script>
-      <script
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-8PNKY9729Q"></Script>
+      <Script
         dangerouslySetInnerHTML={{ __html: `
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -48,7 +49,7 @@ export default function RootLayout({ children }) {
           `
         }}
       >
-      </script>
+      </Script>
     </html>
   )
 }
