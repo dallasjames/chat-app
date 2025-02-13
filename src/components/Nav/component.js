@@ -1,7 +1,13 @@
 import React from 'react'
 import './styles.scss'
 
-export default function Nav() {
+export default function Nav({
+  links = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Magician', href: '/magician' },
+  ]
+}) {
   return (
     <div className='Nav'>
       <div className='Nav__container'>
@@ -9,8 +15,9 @@ export default function Nav() {
           <img src='/images/logo.png' alt='logo' />
         </a>
         <nav>
-          <a href='/'>Home</a>
-          <a href='/about'>About</a>
+          {links.map((link, index) => (
+            <a key={index} href={link.href}>{link.name}</a>
+          ))}
         </nav>
       </div>
     </div>

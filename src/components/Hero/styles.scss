@@ -19,26 +19,17 @@
   h1 {
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 50%;
     width: 100%;
     margin: 0;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
     @include font-bold;
     font-size: 38px;
     line-height: 1.1;
     text-align: center;
-    color: $color-transparent;
     
     @include respond-to('md') {
       font-size: 48px;
-    }
-
-    @include respond-to('xl') {
-      top: 0;
-      width: auto;
-      animation-duration: $animation-duration-standard;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
     }
   }
 }

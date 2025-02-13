@@ -2,10 +2,6 @@
 @use 'styles/mixins' as *;
 
 .Home {
-  $minX: 10px;
-  $maxX: 875px;
-  $minY: 70px;
-  $maxY: 550px;
   position: relative;
   margin: 0 auto;
   padding: 0px 40px;
@@ -15,71 +11,8 @@
     max-width: 1200px;
   }
 
-  .Hero {
-    h1 {
-      animation-name: crazyTransform;
-      
-    }
-    &:hover {
-      h1 {
-        animation-name: crazyTransformHover;
-      }
-    }
-  }
-
-  @keyframes crazyTransform {
-    0% {
-      transform: translateX($minX) translateY($minY);
-      background: radial-gradient($color-1, $color-2);
-      background-clip: text;
-    }
-    25% {
-      transform: translateX($maxX) translateY($minY);
-      background: radial-gradient($color-3, $color-4);
-      background-clip: text;
-    }
-    50% {
-      transform: translateX($maxX) translateY($maxY);
-      background: radial-gradient($color-5, $color-6);
-      background-clip: text;
-    }
-    75% {
-      transform: translateX($minX) translateY($maxY);
-      background: radial-gradient($color-7, $color-8);
-      background-clip: text;
-    }
-    100% {
-      transform: translateX($minX) translateY($minY);
-      background: radial-gradient($color-9, $color-10);
-      background-clip: text;
-    }
-  }
-
-  @keyframes crazyTransformHover {
-    0% {
-      transform: translateX($minX) translateY($minY);
-      background: radial-gradient($color-1, $color-2);
-      background-clip: text;
-    }
-    25% {
-      transform: translateX($minX) translateY($maxY);
-      background: radial-gradient($color-3, $color-4);
-      background-clip: text;
-    }
-    50% {
-      transform: translateX($maxX) translateY($maxY);
-      background: radial-gradient($color-5, $color-6);
-      background-clip: text;
-    }
-    75% {
-      transform: translateX($maxX) translateY($minY);
-      background: radial-gradient($color-7, $color-8);
-      background-clip: text;
-    }
-    100% {
-      transform: translateX($minX) translateY($minY);
-      background: radial-gradient($color-9, $color-10);
-      background-clip: text;
-    }
+  h1 {
+    color: $color-transparent;
+    animation: colorTransform1 $animation-duration-standard linear infinite;
   }
 }

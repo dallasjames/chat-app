@@ -6,6 +6,7 @@ body {
   background-color: light-dark($color-light, $color-dark);
   color: light-dark($color-dark, $color-light);
   @include font-default;
+  overflow-x: hidden;
 
   @for $i from 1 through 10 {
     .mouse-follower:nth-child(#{$i}) {
@@ -20,7 +21,7 @@ h2,
 h3,
 h4,
 h5,
-h5 {
+h6 {
   @include font-bold;
 }
 
@@ -106,5 +107,51 @@ strong {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes colorTransform1 {
+  0% {
+    background: radial-gradient($color-1, $color-2);
+    background-clip: text;
+  }
+  20% {
+    background: radial-gradient($color-3, $color-4);
+    background-clip: text;
+  }
+  40% {
+    background: radial-gradient($color-5, $color-6);
+    background-clip: text;
+  }
+  60% {
+    background: radial-gradient($color-7, $color-8);
+    background-clip: text;
+  }
+  80% {
+    background: radial-gradient($color-9, $color-10);
+    background-clip: text;
+  }
+}
+
+@keyframes colorTransform2 {
+  0% {
+    background: radial-gradient($color-10, $color-9);
+    background-clip: text;
+  }
+  20% {
+    background: radial-gradient($color-8, $color-7);
+    background-clip: text;
+  }
+  40% {
+    background: radial-gradient($color-6, $color-5);
+    background-clip: text;
+  }
+  60% {
+    background: radial-gradient($color-4, $color-3);
+    background-clip: text;
+  }
+  80% {
+    background: radial-gradient($color-2, $color-1);
+    background-clip: text;
   }
 }

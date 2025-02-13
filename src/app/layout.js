@@ -25,16 +25,13 @@ export default function RootLayout({ children }) {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/favicon.ico" />
       <body>
-        <div className='spinner' style={{top: y, left: x}}>
-          {followerArray.map((item, index) => {
+        {/* <div className='spinner' style={{top: y, left: x}}>
+          {followerArray.map((circle, index) => {
             return (
-              <div
-                key={'item-' + index}
-                className='mouse-follower'
-              />
+              <div key={`mouse-circle-${index}`} className='mouse-follower'/>
             )
           })}
-        </div>
+        </div> */}
         <Nav />
         {children}
       </body>

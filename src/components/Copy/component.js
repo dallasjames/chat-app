@@ -24,7 +24,7 @@ export default function Copy({
     <div className='Copy'>
       <div className='container'>
         {copy.map((item, index) => {
-          return <p key={index}>{item}</p>
+          return <p key={'copy-line-' + index}>{item}</p>
         })}
       </div>
     </div>
